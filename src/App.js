@@ -9,19 +9,35 @@ import Interests from './components/Interests'
 import OnlineCources from './components/OnlineCources'
 import Projects from './components/Projects'
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar></Navbar>
-      <AboutMe></AboutMe>
-      <Education></Education>
-      <Projects></Projects>
-      <Skills></Skills>
-      {/* <OnlineCources></OnlineCources> */}
-      <Interests></Interests>
-      <Contact></Contact>
-    </div>
-  );
-}
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
+function App(){
+  const slider = (
+  <>
+  <Navbar />
+  <AwesomeSlider>
+    <div><AboutMe /></div>
+    <div><Skills /></div>
+    <div><Projects/></div>
+    <div><Contact/></div>
+  </AwesomeSlider>
+  </>
+);
+return slider
+}
 export default App;
+
+  // return (
+  //   <div className="App">
+  //     <Navbar></Navbar>
+  //     <AboutMe></AboutMe>
+  //     <Education></Education>
+  //     <Projects></Projects>
+  //     <Skills></Skills>
+  //     {/* <OnlineCources></OnlineCources> */}
+  //     <Interests></Interests>
+  //     <Contact></Contact>
+  //   </div>
+  // );
+

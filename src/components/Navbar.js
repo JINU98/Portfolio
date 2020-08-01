@@ -14,6 +14,9 @@ const fontColor={
     marginLeft:"30px",
     fontFamily:"cursive"
 }
+
+
+
 function Navbar() {
     return (
      <>
@@ -22,16 +25,16 @@ function Navbar() {
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav" >
       <li class="nav-item active">
-        <a style={fontColor}class="nav-link" href="#">About Me</a>
+        <a style={fontColor}class="nav-link">About Me</a>
       </li>
       <li class="nav-item">
-        <a style={fontColor} class="nav-link" href="#">Education</a>
+        <a style={fontColor} class="nav-link" href="#Education">Education</a>
       </li>
       <li class="nav-item">
-        <a style={fontColor} class="nav-link" href="#">Projects</a>
+        <a style={fontColor} class="nav-link" href="#Projects">Projects</a>
       </li>
       <li class="nav-item">
-        <a style={fontColor} class="nav-link" href="#">Skills</a>
+        <a style={fontColor} class="nav-link" href="#Skills">Skills</a>
       </li>
       {/* <li class="nav-item">
         <a style={fontColor} class="nav-link" href="#">Online Courses</a>

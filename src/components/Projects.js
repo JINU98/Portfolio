@@ -1,27 +1,32 @@
 import React from 'react'
 
 const fit={
-    height:"225px",
-    width:"450px",
+    height:"300px",
+    width:"600px",
 }
 
 function Projects() {
     return (
-        <div style={{backgroundColor:"rgb(192,192,192)"}}>
-        <h2 style={{fontSize:"50px",marginTop:"10px",marginBottom:"20px",marginRight:"82%",fontFamily:"Cursive"}}>Projects</h2>
-            <div className="row" style={{marginLeft:"10px"}}>
-                <div className="col-lg-4 col-md-4 col-sm-4">
+        <div style={{color:"white",marginLeft:"7%"}}>
+        <h2>Projects</h2>
+            <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-6">
+                    <img style={fit} src="demo3.gif" alt="hello4" />
+                    <h5>Precision Based Agriculture and Horticulture</h5>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-6">
                     <img style={fit} src="demo.gif" alt="hello1" />
                   <h5>Facial Keypoints Detection </h5> 
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-4">
+                <div className="col-lg-6 col-md-6 col-sm-6">
                     <img style={fit} src="demo1.gif" alt="hello2" />
                     <h5>  Data-Dashboard Using Streamlit</h5>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-4">
+                <div className="col-lg-6 col-md-6 col-sm-6">
                     <img style={fit} src="demo2.gif" alt="hello3" />
                     <h5> Neural Network Visualizer</h5>
                 </div>
+                 
             </div>
         </div>
     )

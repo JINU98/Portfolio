@@ -2,7 +2,7 @@ import React from 'react'
 
 function Skills() {
     return (
-        <div style={{backgroundColor:"#000"}}>
+        <div style={{backgroundColor:"#232323"}}>
         <h2 style={{fontSize:"50px",marginTop:"10px",marginBottom:"20px",marginRight:"87%",fontFamily:"Cursive",color:"white"}}>Skills</h2>
        <div  style={{fontSize:"50px",color:"white"}}>
         <strong>Frontend:</strong><span> React.js,Angular,Vue.js</span>    
