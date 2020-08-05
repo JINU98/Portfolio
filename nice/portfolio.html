@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jinendra Malekar</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@1,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+	<style type="text/css">
+		html {
+  			/*scroll-behavior: smooth;*/
+			}
+		body{
+			/*background:#000;*/
+			/*height: 900px;*/
+			/*overflow: hidden;*/
+			background: url("background.jpg")
+			/*background-repeat:no-repeat;*/
+		}
+		h1{
+			font-family: 'Alegreya SC', serif;
+			color:rgb(138,3,3);
+		}
+		.btn{
+			color:white;
+			background-color:rgb(138,3,3); 
+		}
+		#center{
+			margin:20% 0 0 20%;
+			padding-right: 5%;
+		}
+		#tree{
+			/*position: relative;*/
+			margin-top: 10%;
+			/*transform: translateZ(100px);*/
+			/*float: right;*/
+			/*z-index: 1;*/
+					}
+		#branch{
+			position: absolute;
+			z-index: -2;
+		}
+		span{
+			position:absolute;
+			/*margin:0;	*/
+			z-index: 10;
+		}
+		/*.container{
+			position:absolute;
+			z-index: -1;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- <div class="container"><img height="500",width="500" src="test1.png"></div>
+ --><!-- <img style="float:right;"height=500,width=500 src="bird.png"> -->
+
+	<div class="row">
+<!-- 	 <svg height="210" width="1500">
+  <line x1="0" y1="50" x2="10000" y2="50" style="stroke:rgb(0,0,255);stroke-width:10" />
+</svg>  -->
+	<!-- <iframe id="branch"src='https://gfycat.com/ifr/DaringAcidicImpala' frameborder='0' sclrolling='no' width='1000' height='498'></iframe> -->
+	<center id='center'>
+	<center><h1>Hello I am <strong>Jinendra Malekar</strong></h1></center>
+	<center><h1>I am a full-stack web developer.</h1></center>
+	<button href="#go" class="btn">View My work <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+	</center>
+	<img id="tree" height=550  src="red-tree.gif">
+
+</div>
+	<div class="row">
+		<span id="fall0"></span>
+		<span id="fall1"></span>
+		<span id="fall2"></span>
+		<span id="fall3"></span>
+		<span id="fall4"></span>
+		<span id="fall5"></span>
+		<span id="fall6"></span>
+		<span id="fall7"></span>
+		<span id="fall8"></span>
+		<span id="fall9"></span>
+		<span id="fall10"></span>
+		<span id="fall11"></span>
+		<span id="fall12"></span>
+		<span id="fall13"></span>
+		<span id="fall14"></span>
+		<span id="fall15"></span>
+		<span id="fall16"></span>
+		<span id="fall17"></span>
+		<span id="fall18"></span>
+		<span id="fall19"></span>
+		<span id="fall20"></span>
+		<span id="fall21"></span>
+		<span id="fall22"></span>
+		<span id="fall23"></span>
+		<span id="fall24"></span>
+		<span id="fall25"></span>
+		<span id="fall26"></span>
+		<span id="fall27"></span>
+		<span id="fall28"></span>
+		<span id="fall29"></span>
+		<span id="fall30"></span>
+		<span id="fall31"></span>
+		<span id="fall32"></span>
+		<span id="fall33"></span>
+		<span id="fall34"></span>
+		<span id="fall35"></span>
+		<span id="fall36"></span>
+		<span id="fall37"></span>
+		<span id="fall38"></span>
+		<span id="fall39"></span>
+		<span id="fall40"></span>
+		<span id="fall41"></span>
+		<span id="fall42"></span>
+		<span id="fall43"></span>
+		<span id="fall44"></span>
+		<span id="fall45"></span>
+		<span id="fall46"></span>
+		<span id="fall47"></span>
+		<span id="fall48"></span>
+		<span id="fall49"></span>
+		<span id="fall50"></span>
+		<span id="fall51"></span>
+	</div>
+</div>
+<div id="go" style="height: 2000px">
+	<nav class="nav nav-pills nav-justified">
+  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link" href="#">Longer nav link</a>
+  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link disabled" href="#">Disabled</a>
+</nav>
+
+</div>
+
+	<script type="text/javascript">
+	function Remove(d){
+	var element = document.getElementById(d);
+	element.parentNode.removeChild(element);
+	}
+	var flag=0
+	function fall(){
+	var tl=gsap.timeline()
+	if(flag%3 === 0){
+	var b="fall"
+	var a=Math.floor(Math.random()*52)
+	var c=b+a
+	var d=document.createElement("img")
+	d.src="leaf.png"
+	var source=document.getElementById(c)
+	source.appendChild(d)
+}
+	var f=Math.floor(Math.random()*52)
+	var b="fall"
+	var g=b+f
+	var e=document.createElement("img")
+	e.src="fall1.png"
+	var source1=document.getElementById(g)
+	source1.appendChild(e)
+	var ranx =Math.floor(Math.random()*2000)
+	// var rany =Math.floor(Math.random()*501)
+	if (flag%3 === 0){
+		tl.fromTo(d,{duration:10,x:ranx,y:-800},{duration:10,y:10,rotation:360, ease:Linear.easeNone, repeat:-1,scale:0})
+	}
+	tl.fromTo(e,{duration:10,x:ranx,y:-800},{duration:10,y:10,scale:0})
+	flag=flag+1	
+
+	  // .call(Remove,[c])	
+	// TweenMax.to(yourElement, 1, {rotation:360, ease:Linear.easeNone, repeat:-1})
+	
+	}
+	fall()
+	// setInterval(fall,500)
+	</script>
+
+</body>
+</html>
