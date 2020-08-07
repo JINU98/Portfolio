@@ -8,54 +8,93 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 	<style type="text/css">
 		html {
-  			/*scroll-behavior: smooth;*/
+  			scroll-behavior: smooth;
+  			margin:0;
+			padding: 0;
 			}
 		body{
 			/*background:#000;*/
-			/*height: 900px;*/
-			/*overflow: hidden;*/
-			background: url("background.jpg")
+			/*height: 900px;/*/
+			/*overflow-y: hidden;*/	
+			/*background: url("background.jpg")*/
 			/*background-repeat:no-repeat;*/
+			margin:0;
+			padding: 0;
 		}
 		h1{
 			font-family: 'Alegreya SC', serif;
-			color:rgb(138,3,3);
+			color:darkgreen;
 		}
 		.btn{
 			color:white;
-			background-color:rgb(138,3,3); 
+			background-color:brown; 
 		}
 		#center{
-			margin:20% 0 0 20%;
+			position:absolute;	
+			margin:8% 0 0 34%;	
 			padding-right: 5%;
+			z-index: 10;
 		}
 		#tree{
-			/*position: relative;*/
-			margin-top: 10%;
+			position: absolute;
+			margin:10% 0 0 71%;
 			/*transform: translateZ(100px);*/
 			/*float: right;*/
-			/*z-index: 1;*/
+			z-index: 9;
 					}
-		#branch{
-			position: absolute;
-			z-index: -2;
-		}
 		span{
 			position:absolute;
 			/*margin:0;	*/
 			z-index: 10;
+		}	
+		
+		#backgound{
+			position: absolute; 
+  			top: 0; 
+  			left: 0; 
+ 			min-width: 100%;
+  			min-height: 100%;
+  			z-index: -3;
+		}
+		.nav-link{
+			color:rgb(138,3,3);
+		}
+		.nav-link:hover {
+			color:rgb(138,3,3);
+			font-weight: 700;
+			border-bottom:5px solid rgb(138,3,3);
+
+		}
+		nav{
+			margin: 20px 10px;
+			/*background-color: #234245;*/
 		}
 		/*.container{
 			position:absolute;
 			z-index: -1;
 		}*/
+		#about{
+			color:rgb(138,3,3);
+			font-size: 30px;
+			border-bottom: 5px solid rgb(138,3,3);
+			width:10%;
+
+			/*text-align: left;*/
+			margin:3% 10%;
+		}
+		#content{
+			width: 50%;
+			font-size: 50px;
+			color:rgb(138,3,3);
+		}
 	</style>
 </head>
 <body>
 	<!-- <div class="container"><img height="500",width="500" src="test1.png"></div>
  --><!-- <img style="float:right;"height=500,width=500 src="bird.png"> -->
-
+ 	
 	<div class="row">
+	<img id="background"src="backhd.png" height="800"width="1550">
 <!-- 	 <svg height="210" width="1500">
   <line x1="0" y1="50" x2="10000" y2="50" style="stroke:rgb(0,0,255);stroke-width:10" />
 </svg>  -->
@@ -63,9 +102,9 @@
 	<center id='center'>
 	<center><h1>Hello I am <strong>Jinendra Malekar</strong></h1></center>
 	<center><h1>I am a full-stack web developer.</h1></center>
-	<button href="#go" class="btn">View My work <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+	<button href="#go" class="btn">View My work <i class="fa fa-long-arrow-down" aria-hidden="true"></i></button>
 	</center>
-	<img id="tree" height=550  src="red-tree.gif">
+	<!-- <img id="tree" height=650  src="red-tree.gif"> -->
 
 </div>
 	<div class="row">
@@ -122,17 +161,52 @@
 		<span id="fall50"></span>
 		<span id="fall51"></span>
 	</div>
-</div>
-<div id="go" style="height: 2000px">
-	<nav class="nav nav-pills nav-justified">
-  <a class="nav-link active" href="#">Active</a>
-  <a class="nav-link" href="#">Longer nav link</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled" href="#">Disabled</a>
+	<nav class="navbar sticky-top navbar-expand-lg">
+  <a class="navbar-brand" style="color:rgb(138,3,3);margin-right: 59%"href="#">Jinendra Malekar</a>
+  <button style="color:red"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span style="color:red" class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About Me<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Interests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
 </nav>
-
+<!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+<div style="height: 690px">
+	<div id="about">About Me</div>
+	<div class="container">
+		<div id="content">
+Hello There...<br>
+I am Jinendra Malekar <br>
+Lets build a complete website with sophisticated web technologies and the power of Data Science.
+<div id="content" style="float:right;">
+	<!-- <img src="profile.png"> -->
 </div>
-
+		</div>
+	</div>
+</div>
 	<script type="text/javascript">
 	function Remove(d){
 	var element = document.getElementById(d);
@@ -141,7 +215,7 @@
 	var flag=0
 	function fall(){
 	var tl=gsap.timeline()
-	if(flag%3 === 0){
+	if(flag%3 === 'p'){
 	var b="fall"
 	var a=Math.floor(Math.random()*52)
 	var c=b+a
@@ -157,12 +231,12 @@
 	e.src="fall1.png"
 	var source1=document.getElementById(g)
 	source1.appendChild(e)
-	var ranx =Math.floor(Math.random()*2000)
+	var ranx =Math.floor(Math.random()*700)
 	// var rany =Math.floor(Math.random()*501)
-	if (flag%3 === 0){
-		tl.fromTo(d,{duration:10,x:ranx,y:-800},{duration:10,y:10,rotation:360, ease:Linear.easeNone, repeat:-1,scale:0})
+	if (flag%3 === 'p'){
+		tl.fromTo(d,{duration:10,x:ranx,y:-850},{duration:10,y:10,rotation:360, ease:Linear.easeNone,scale:0})
 	}
-	tl.fromTo(e,{duration:10,x:ranx,y:-800},{duration:10,y:10,scale:0})
+	tl.fromTo(e,{duration:10,x:ranx,y:-850},{duration:10,y:10,scale:0})
 	flag=flag+1	
 
 	  // .call(Remove,[c])	
@@ -170,7 +244,7 @@
 	
 	}
 	fall()
-	// setInterval(fall,500)
+	// setInterval(fall,100)
 	</script>
 
 </body>
