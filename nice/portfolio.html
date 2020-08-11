@@ -20,18 +20,19 @@
 			/*background-repeat:no-repeat;*/
 			margin:0;
 			padding: 0;
+			background-color:rgba(0,0,0,0.1);
 		}
 		h1{
 			font-family: 'Alegreya SC', serif;
-			color:darkgreen;
+			color:white;
 		}
 		.btn{
-			color:white;
-			background-color:brown; 
+			color:black;
+			background-color:white; 
 		}
 		#center{
 			position:absolute;	
-			margin:8% 0 0 34%;	
+			margin:5% 0 0 34%;	
 			padding-right: 5%;
 			z-index: 10;
 		}
@@ -44,8 +45,8 @@
 					}
 		span{
 			position:absolute;
-			/*margin:0;	*/
 			z-index: 10;
+			color:white;
 		}	
 		
 		#backgound{
@@ -57,17 +58,16 @@
   			z-index: -3;
 		}
 		.nav-link{
-			color:rgb(138,3,3);
+			color:black;
 		}
 		.nav-link:hover {
-			color:rgb(138,3,3);
+			color:black;
 			font-weight: 700;
-			border-bottom:5px solid rgb(138,3,3);
-
+			border-bottom:5px solid rgba(0,0,0);
 		}
 		nav{
-			margin: 20px 10px;
-			/*background-color: #234245;*/
+			/*margin: 20px 10px;*/
+			background-color:rgba(0,0,0,0.1);
 		}
 		/*.container{
 			position:absolute;
@@ -76,7 +76,7 @@
 		#about{
 			color:rgb(138,3,3);
 			font-size: 30px;
-			border-bottom: 5px solid rgb(138,3,3);
+			border-bottom: 5px solid black;
 			width:10%;
 
 			/*text-align: left;*/
@@ -87,6 +87,10 @@
 			font-size: 50px;
 			color:rgb(138,3,3);
 		}
+		#profile{
+			max-width:100%;
+    		height:auto;
+		}
 	</style>
 </head>
 <body>
@@ -94,13 +98,13 @@
  --><!-- <img style="float:right;"height=500,width=500 src="bird.png"> -->
  	
 	<div class="row">
-	<img id="background"src="backhd.png" height="800"width="1550">
+	<img id="background"src="cool.jpg" height="800"width="1550">
 <!-- 	 <svg height="210" width="1500">
   <line x1="0" y1="50" x2="10000" y2="50" style="stroke:rgb(0,0,255);stroke-width:10" />
 </svg>  -->
 	<!-- <iframe id="branch"src='https://gfycat.com/ifr/DaringAcidicImpala' frameborder='0' sclrolling='no' width='1000' height='498'></iframe> -->
 	<center id='center'>
-	<center><h1>Hello I am <strong>Jinendra Malekar</strong></h1></center>
+	<center><h1 id="intro">Hello I am <strong>Jinendra Malekar</strong></h1></center>
 	<center><h1>I am a full-stack web developer.</h1></center>
 	<button href="#go" class="btn">View My work <i class="fa fa-long-arrow-down" aria-hidden="true"></i></button>
 	</center>
@@ -108,61 +112,61 @@
 
 </div>
 	<div class="row">
-		<span id="fall0"></span>
-		<span id="fall1"></span>
-		<span id="fall2"></span>
-		<span id="fall3"></span>
-		<span id="fall4"></span>
-		<span id="fall5"></span>
-		<span id="fall6"></span>
-		<span id="fall7"></span>
-		<span id="fall8"></span>
-		<span id="fall9"></span>
-		<span id="fall10"></span>
-		<span id="fall11"></span>
-		<span id="fall12"></span>
-		<span id="fall13"></span>
-		<span id="fall14"></span>
-		<span id="fall15"></span>
-		<span id="fall16"></span>
-		<span id="fall17"></span>
-		<span id="fall18"></span>
-		<span id="fall19"></span>
-		<span id="fall20"></span>
-		<span id="fall21"></span>
-		<span id="fall22"></span>
-		<span id="fall23"></span>
-		<span id="fall24"></span>
-		<span id="fall25"></span>
-		<span id="fall26"></span>
-		<span id="fall27"></span>
-		<span id="fall28"></span>
-		<span id="fall29"></span>
-		<span id="fall30"></span>
-		<span id="fall31"></span>
-		<span id="fall32"></span>
-		<span id="fall33"></span>
-		<span id="fall34"></span>
-		<span id="fall35"></span>
-		<span id="fall36"></span>
-		<span id="fall37"></span>
-		<span id="fall38"></span>
-		<span id="fall39"></span>
-		<span id="fall40"></span>
-		<span id="fall41"></span>
-		<span id="fall42"></span>
-		<span id="fall43"></span>
-		<span id="fall44"></span>
-		<span id="fall45"></span>
-		<span id="fall46"></span>
-		<span id="fall47"></span>
-		<span id="fall48"></span>
-		<span id="fall49"></span>
-		<span id="fall50"></span>
-		<span id="fall51"></span>
+		<span id="fall0">1</span>
+		<span id="fall1">0</span>
+		<span id="fall2">1</span>
+		<span id="fall3">0</span>
+		<span id="fall4">1</span>
+		<span id="fall5">0</span>
+		<span id="fall6">1</span>
+		<span id="fall7">0</span>
+		<span id="fall8">1</span>
+		<span id="fall9">0</span>
+		<span id="fall10">1</span>
+		<span id="fall11">0</span>
+		<span id="fall12">1</span>
+		<span id="fall13">0</span>
+		<span id="fall14">1</span>
+		<span id="fall15">0</span>
+		<span id="fall16">1</span>
+		<span id="fall17">0</span>
+		<span id="fall18">1</span>
+		<span id="fall19">0</span>
+		<span id="fall20">1</span>
+		<span id="fall21">0</span>
+		<span id="fall22">1</span>
+		<span id="fall23">0</span>
+		<span id="fall24">1</span>
+		<span id="fall25">0</span>
+		<span id="fall26">1</span>
+		<span id="fall27">0</span>
+		<span id="fall28">1</span>
+		<span id="fall29">0</span>
+		<span id="fall30">1</span>
+		<span id="fall31">0</span>
+		<span id="fall32">1</span>
+		<span id="fall33">0</span>
+		<span id="fall34">1</span>
+		<span id="fall35">0</span>
+		<span id="fall36">1</span>
+		<span id="fall37">0</span>
+		<span id="fall38">1</span>
+		<span id="fall39">0</span>
+		<span id="fall40">1</span>
+		<span id="fall41">0</span>
+		<span id="fall42">1</span>
+		<span id="fall43">0</span>
+		<span id="fall44">1</span>
+		<span id="fall45">0</span>
+		<span id="fall46">1</span>
+		<span id="fall47">0</span>
+		<span id="fall48">1</span>
+		<span id="fall49">0</span>
+		<span id="fall50">1</span>
+		<span id="fall51">0</span>
 	</div>
 	<nav class="navbar sticky-top navbar-expand-lg">
-  <a class="navbar-brand" style="color:rgb(138,3,3);margin-right: 59%"href="#">Jinendra Malekar</a>
+  <a class="navbar-brand" style="color:black;margin-right: 59%"href="#">Jinendra Malekar</a>
   <button style="color:red"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span style="color:red" class="navbar-toggler-icon"></span>
   </button>
@@ -190,11 +194,12 @@
     </ul>
   </div>
 </nav>
+<img style="max-width: 100%;height: auto"src="wide.jpg">
 <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
-<div style="height: 690px">
+<!-- div style="height: 690px">
 	<div id="about">About Me</div>
 	<div class="container">
 		<div id="content">
@@ -202,9 +207,77 @@ Hello There...<br>
 I am Jinendra Malekar <br>
 Lets build a complete website with sophisticated web technologies and the power of Data Science.
 <div id="content" style="float:right;">
-	<!-- <img src="profile.png"> -->
+	<img src="profile.png">
 </div>
 		</div>
+	</div>
+</div> -->
+<div class="row"style="height:500px;margin:1%">
+	<div class="col-lg-9"style="background-color: white;width:80%;position: absolute;">
+		<div style="overflow: scroll; height: 500px;overflow-x:hidden; ">
+		<div class="row">
+			<div class="col-lg-4">
+				<img style="max-width: 100%;height:auto;"src="horti.jpg">
+			</div>
+			<div class="col-lg-8">
+				<h1 style="color: black">Precision Based Agriculture and Horticulture</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<!-- <img style="max-width: 100%;height:auto;"src="https://images.unsplash.com/photo-1560762354-1be2f3d3c3f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"> -->
+			<img style="max-width: 100%;height:auto;"src="https://images.unsplash.com/photo-1565624736233-2ec7a7afbee5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+			</div>
+
+			<div class="col-lg-8">
+				<h1 style="color: black">Facial Keypoints Detection</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<img style="max-width: 100%;height:auto;"src="sit.jpg">
+			</div>
+			<div class="col-lg-8">
+				<h1 style="color: black">Data Dashboard</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<img style="max-width: 100%;height:auto;"src="cube.jpg">
+			</div>
+			<div class="col-lg-8">
+				<h1 style="color: black">Neural Network Visualization</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="col-lg-2" style="background-color: white;width:20%;position: absolute;margin-left:77%">
+		<div style="border-bottom: 2px solid black;">ABOUT ME</div>
+		<img style="border-radius: 100%;margin-top: 2%"id="profile"src="https://media-exp1.licdn.com/dms/image/C5103AQGwrowv827-8Q/profile-displayphoto-shrink_400_400/0?e=1602720000&v=beta&t=wR4wXENCVTlimeXitxiSKlkQc6-8CU30oUE5hiSv_FQ">
 	</div>
 </div>
 	<script type="text/javascript">
@@ -213,38 +286,47 @@ Lets build a complete website with sophisticated web technologies and the power 
 	element.parentNode.removeChild(element);
 	}
 	var flag=0
+	var count=0
 	function fall(){
-	var tl=gsap.timeline()
-	if(flag%3 === 'p'){
-	var b="fall"
-	var a=Math.floor(Math.random()*52)
-	var c=b+a
-	var d=document.createElement("img")
-	d.src="leaf.png"
-	var source=document.getElementById(c)
-	source.appendChild(d)
-}
-	var f=Math.floor(Math.random()*52)
-	var b="fall"
-	var g=b+f
-	var e=document.createElement("img")
-	e.src="fall1.png"
+// 	var tl=gsap.timeline()
+// 	if(flag%3 === 'p'){
+// 	var b="fall"
+// 	var a=Math.floor(Math.random()*52)
+// 	var c=b+a
+// 	var d=document.createElement("img")
+// 	d.src="leaf.png"
+// 	var source=document.getElementById(c)
+// 	source.appendChild(d)
+// }
+	// var f=Math.floor(Math.random()*26)
+	// var p=Math.floor(Math.random()*26)+26
+	
+	var b="#fall"
+	var g=b+(count)
+	var h=b+(flag)
+
+
+
+	// var e=document.createElement("img")
+	// e.src="fall1.png"
 	var source1=document.getElementById(g)
-	source1.appendChild(e)
-	var ranx =Math.floor(Math.random()*700)
+	// source1.appendChild(e)
+	var ranx=Math.floor(Math.random()*1500)
 	// var rany =Math.floor(Math.random()*501)
 	if (flag%3 === 'p'){
 		tl.fromTo(d,{duration:10,x:ranx,y:-850},{duration:10,y:10,rotation:360, ease:Linear.easeNone,scale:0})
 	}
-	tl.fromTo(e,{duration:10,x:ranx,y:-850},{duration:10,y:10,scale:0})
-	flag=flag+1	
-
+	gsap.fromTo(g,{duration:10,x:100,y:-850},{duration:10,y:-25})
+	gsap.fromTo(h,{duration:10,x:1400,y:-850},{duration:10,y:-25})
+	
+	flag=((flag+1)%26)+26	
+	count=(count+1)%26
 	  // .call(Remove,[c])	
 	// TweenMax.to(yourElement, 1, {rotation:360, ease:Linear.easeNone, repeat:-1})
 	
 	}
 	fall()
-	// setInterval(fall,100)
+	setInterval(fall,300)
 	</script>
 
 </body>
