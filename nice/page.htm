@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diff Page</title>
+	<style type="text/css">
+		.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  /*  font-size: 22px;*/
+    /*color: #fff;*/
+    /*line-height: 100px;*/
+    /*text-align: center;*/
+    /*background: #2ecc71;*/
+    /*margin:0;*/
+    border-radius: 100%;
+    animation: circular 5s linear infinite;	
+}
+@keyframes circular {
+    from { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+}
+	.percen{
+		opacity: 0;
+
+	}
+	.percen:hover{
+				opacity: 1;
+				/*border:3px solid white;*/
+			}
+
+	.upper:hover{
+		width:100%;
+		border:3px solid white;
+	}
+	</style>
+</head>
+<body>
+	<div style="background-color:rgba(128,0,0,0.7);height: 850px">
+	<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6"style="text-align: center;width:65%;">
+
+	<img style="max-width:100%;height:auto; margin: 10% 0 0 0"src="lap-boy.png">
+	<div style="margin: -26% 0 0 -5%;">
+	<div>
+	<img style="max-width:100%;height:auto;" class="box" src="react.png" >
+	<img style="animation-delay: 1s;max-width:100%;height:auto;" class="box" src="node.png">
+	<img style="animation-delay: 2s;max-width:100%;height:auto;" class="box" src="django.png">
+	<img style="animation-delay: 3s;max-width:100%;height:auto;" class="box"src="flask.png">
+	<img style="animation-delay: 4s;max-width:100%;height:auto;" class="box" src="python.png">
+	</div>
+	</div>
+
+	</div>
+
+	<div class="col-lg-6 col-md-6 col-sm-6" style="height:850px;width:35%;">
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">HTML 
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">70</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">CSS
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">60</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">Django
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">50</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">Python
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width:100%">
+			|<span style="display: none;">40</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">Flask
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">30</span><span></span>
+			</div>
+			</div>
+		</div>
+		</div>
+
+
+	</div>
+</div>
+<script type="text/javascript">
+	var x=document.getElementsByClassName("percen");
+	var j=0;
+		for(i=0; i<x.length; i++){
+		x[i].addEventListener("mouseover",function(){
+			if(j==0){
+			var elem=this;
+			var till = elem.childNodes[1].innerHTML;
+			switch(till){
+				case '70':
+				till=70;
+				break;
+
+				case '60':
+				till=60;
+				break;
+
+				case '50':
+				till=50;
+				break;
+
+				case '40':
+				till=40;
+				break;
+
+				case '30':
+				till=30;
+				break;
+
+				default:
+				still=100;
+			}
+			// var till=parseInt(till)
+			var width=10;
+			var id=setInterval(frame,10)
+			function frame(){
+				if(width >= till){
+					clearInterval(id);
+					j=0;
+				}
+				else{
+					width++;
+					elem.style.width=width+"%";
+					elem.childNodes[2].innerHTML=width+"%"
+				}
+			}
+		}
+		});
+		}
+</script>
+</body>
+</html>
+

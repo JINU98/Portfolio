@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Jinendra Malekar</title>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@1,800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet"> 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/MotionPathPlugin.min.js"></script>
 	<style type="text/css">
+
 		html {
   			scroll-behavior: smooth;
   			margin:0;
 			padding: 0;
+
 			}
 		body{
 			/*background:#000;*/
@@ -21,7 +26,13 @@
 			margin:0;
 			padding: 0;
 			background-color:rgba(0,0,0,0.1);
+			overflow-y:hidden;
+			overflow-x:scroll; 
+			/*transform:rotate(-90deg) translateY(-80px);
+  			transform-origin:right top;*/
+  			
 		}
+		
 		h1{
 			font-family: 'Alegreya SC', serif;
 			color:white;
@@ -36,25 +47,19 @@
 			padding-right: 5%;
 			z-index: 10;
 		}
-		#tree{
-			position: absolute;
-			margin:10% 0 0 71%;
-			/*transform: translateZ(100px);*/
-			/*float: right;*/
-			z-index: 9;
-					}
 		span{
 			position:absolute;
 			z-index: 10;
 			color:white;
+			padding-left: -2%;
 		}	
 		
 		#backgound{
 			position: absolute; 
-  			top: 0; 
-  			left: 0; 
- 			min-width: 100%;
-  			min-height: 100%;
+  			/*top: 0; */
+  			/*left: 0; */
+ 			max-width: 100%;
+  			max-height: 100%;
   			z-index: -3;
 		}
 		.nav-link{
@@ -91,20 +96,57 @@
 			max-width:100%;
     		height:auto;
 		}
+		.box {
+    position: absolute;
+    width: 7%;
+    height: 7%;
+  /*  font-size: 22px;*/
+    /*color: #fff;*/
+    /*line-height: 100px;*/
+    /*text-align: center;*/
+    /*background: #2ecc71;*/
+    /*margin:0;*/
+    border-radius: 100%;
+    animation: circular 5s linear infinite;	
+
+}
+@keyframes circular {
+    from { transform: rotate(0deg) translateX(300%) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(300%) rotate(-360deg); }
+}
+	.percen{
+		opacity: 0;
+
+	}
+	.percen:hover{
+				opacity: 1;
+				/*border:3px solid white;*/
+			}
+
+	.upper:hover{
+		width:100%;
+		border:3px solid white;
+	}
+	@media only screen and (max-width: 50%) {
+
+	}
+	
 	</style>
 </head>
 <body>
 	<!-- <div class="container"><img height="500",width="500" src="test1.png"></div>
  --><!-- <img style="float:right;"height=500,width=500 src="bird.png"> -->
- 	
-	<div class="row">
-	<img id="background"src="cool.jpg" height="800"width="1550">
+ 	<div class="row">
+ 	<!-- page-1 -->
+ 	<div style="position: absolute;overflow: hidden;width: 101%;">
+	<div class="row" id="screen1">
+	<img id="background"  src="cool.jpg" height="850"width="100%">
 <!-- 	 <svg height="210" width="1500">
   <line x1="0" y1="50" x2="10000" y2="50" style="stroke:rgb(0,0,255);stroke-width:10" />
 </svg>  -->
 	<!-- <iframe id="branch"src='https://gfycat.com/ifr/DaringAcidicImpala' frameborder='0' sclrolling='no' width='1000' height='498'></iframe> -->
 	<center id='center'>
-	<center><h1 id="intro">Hello I am <strong>Jinendra Malekar</strong></h1></center>
+	<center><h1 id="">Hello I am <strong>Jinendra Malekar</strong></h1></center>
 	<center><h1>I am a full-stack web developer.</h1></center>
 	<button href="#go" class="btn">View My work <i class="fa fa-long-arrow-down" aria-hidden="true"></i></button>
 	</center>
@@ -165,8 +207,11 @@
 		<span id="fall50">1</span>
 		<span id="fall51">0</span>
 	</div>
-	<nav class="navbar sticky-top navbar-expand-lg">
-  <a class="navbar-brand" style="color:black;margin-right: 59%"href="#">Jinendra Malekar</a>
+	</div>
+<!-- page-2 -->
+	<div  style="position: absolute;margin-left: 101%;width: 100%">
+	<nav style="width: 100%;margin: 0;padding: 0"class="navbar sticky-top navbar-expand-lg">
+  <a class="navbar-brand" style="color:black;margin-right: 58%;margin-left: 1%"href="#">Jinendra Malekar</a>
   <button style="color:red"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span style="color:red" class="navbar-toggler-icon"></span>
   </button>
@@ -174,7 +219,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">About Me<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">About Me</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Education</a>
@@ -193,6 +238,7 @@
       </li>
     </ul>
   </div>
+
 </nav>
 <img style="max-width: 100%;height: auto"src="wide.jpg">
 <!-- <form class="form-inline my-2 my-lg-0">
@@ -212,15 +258,15 @@ Lets build a complete website with sophisticated web technologies and the power 
 		</div>
 	</div>
 </div> -->
-<div class="row"style="height:500px;margin:1%">
-	<div class="col-lg-9"style="background-color: white;width:80%;position: absolute;">
-		<div style="overflow: scroll; height: 500px;overflow-x:hidden; ">
+<div class="row">
+	<div class="col-lg-9 col-md-12 col-sm-12"style="background-color: white;display:inline-block;margin-left:1%">
+		<div style="overflow: scroll; height: 500px;">
 		<div class="row">
 			<div class="col-lg-4">
 				<img style="max-width: 100%;height:auto;"src="horti.jpg">
 			</div>
 			<div class="col-lg-8">
-				<h1 style="color: black">Precision Based Agriculture and Horticulture</h1>
+				<h1 style="color: black;font-family:'Playfair Display', sans-serif">Precision Based Agriculture and Horticulture</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -232,11 +278,11 @@ Lets build a complete website with sophisticated web technologies and the power 
 		<div class="row">
 			<div class="col-lg-4">
 				<!-- <img style="max-width: 100%;height:auto;"src="https://images.unsplash.com/photo-1560762354-1be2f3d3c3f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"> -->
-			<img style="max-width: 100%;height:auto;"src="https://images.unsplash.com/photo-1565624736233-2ec7a7afbee5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+			<img style="max-width: 100%;height:auto;"src="girl1.jpg">
 			</div>
 
 			<div class="col-lg-8">
-				<h1 style="color: black">Facial Keypoints Detection</h1>
+				<h1 style="color: black;font-family:'Playfair Display', sans-serif">Facial Keypoints Detection</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -250,7 +296,7 @@ Lets build a complete website with sophisticated web technologies and the power 
 				<img style="max-width: 100%;height:auto;"src="sit.jpg">
 			</div>
 			<div class="col-lg-8">
-				<h1 style="color: black">Data Dashboard</h1>
+				<h1 style="color: black;font-family:'Playfair Display', sans-serif">Data Dashboard</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -264,7 +310,7 @@ Lets build a complete website with sophisticated web technologies and the power 
 				<img style="max-width: 100%;height:auto;"src="cube.jpg">
 			</div>
 			<div class="col-lg-8">
-				<h1 style="color: black">Neural Network Visualization</h1>
+				<h1 style="color: black;font-family:'Playfair Display', sans-serif">Neural Network Visualization</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -275,10 +321,110 @@ Lets build a complete website with sophisticated web technologies and the power 
 		</div>
 	</div>
 	</div>
-	<div class="col-lg-2" style="background-color: white;width:20%;position: absolute;margin-left:77%">
-		<div style="border-bottom: 2px solid black;">ABOUT ME</div>
-		<img style="border-radius: 100%;margin-top: 2%"id="profile"src="https://media-exp1.licdn.com/dms/image/C5103AQGwrowv827-8Q/profile-displayphoto-shrink_400_400/0?e=1602720000&v=beta&t=wR4wXENCVTlimeXitxiSKlkQc6-8CU30oUE5hiSv_FQ">
+	<div style="margin-left: 2%"></div>
+	<div class="col-lg-2 col-md-12 col-sm-12" style="background-color: white;display:inline-block;">
+		<div style="font-family:'Playfair Display', sans-serif;">About Me</div>
+		<div style="border-bottom: 3px solid black;width: 40%"></div>
+		<img style="border-radius: 100%;max-width: 100%; height: auto"id="profile"src="https://media-exp1.licdn.com/dms/image/C5103AQGwrowv827-8Q/profile-displayphoto-shrink_400_400/0?e=1602720000&v=beta&t=wR4wXENCVTlimeXitxiSKlkQc6-8CU30oUE5hiSv_FQ">
+		<div>
+			<div style="display: inline;font-family:'Playfair Display', sans-serif;">Education : </div>
+			<div style="border-bottom: 3px solid black;width: 40%"></div>
+			<div style="font-family:'Playfair Display', sans-serif;margin-bottom: 3%">IIIT Naya Raipur(2017-2021)</div>
+			<div style="font-family:'Playfair Display', sans-serif;margin-bottom: 3%">
+				Full Stack Developer || <br>Data Science enthusiast
+			</div>
+			<div style="font-family:'Playfair Display', sans-serif;">
+				Let's Build sophisticated websites with latest technologies and power of Data Science.
+			</div>
+		</div>
 	</div>
+</div>
+</div>
+
+<div style="position: absolute;margin-left: 201%;width: 100%">
+	<h1 style="color: white;background-color:rgba(128,0,0,0.7);">Skills</h1>
+	<!--  <iframe src="page.htm" style="border:none;height:850px;width: 100%;" title="Iframe Example"></iframe>  -->
+<div style="background-color:rgba(128,0,0,0.7);height: 850px">
+	<div class="row">
+
+	<div style="text-align: center;height:250px;width:70%">
+
+	<img style="max-width:100%;height:auto; margin: 7% 0 0 0"src="lap-boy.png">
+	<div style="margin: -30% 0 0 -5%;">
+	<img style="max-width:100%;height:auto;" class="box" src="react.png" >
+	<img style="animation-delay: 1s;max-width:100%;height:auto;" class="box" src="node.png">
+	<img style="animation-delay: 2s;max-width:100%;height:auto;" class="box" src="django.png">
+	<img style="animation-delay: 3s;max-width:100%;height:auto;" class="box"src="flask.png">
+	<img style="animation-delay: 4s;max-width:100%;height:auto;" class="box" src="python.png">
+	
+	</div>
+
+	</div>
+
+	<div style="width: 30%">
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">HTML 
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">70</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">CSS
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">60</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">Django
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">50</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">Python
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width:100%">
+			|<span style="display: none;">40</span><span></span>
+			</div>
+			</div>
+		</div>
+		<div style="font-size: 20px;color:white;margin-top:11%;width:80%;">Flask
+			<br>
+			<div class="upper">
+			<div class="percen"style="font-weight: 400; background:black;color: black;width: 100%">
+			|<span style="display: none;">30</span><span></span>
+			</div>
+			</div>
+		</div>
+		</div>
+
+
+	</div>
+</div>
+</div>
+
+<div style="position: absolute;margin-left: 301%;width: 100%">
+<div style="background-color:rgba(0,0,0,0.7);height: 850px">
+	<h1 style="text-align: center;padding-top: 10%">Contact Me</h1>
+	<div class="row">
+	<div style="font-size: 150px;margin-left:12%;color:white"><i class="fa fa-envelope" aria-hidden="true"></i>
+	</div>
+	<div style="font-size: 150px;margin-left:12%;color:white"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+	</div>
+	<div style="font-size: 150px;margin-left:12%;color:white"><i class="fa fa-github-square" aria-hidden="true"></i>
+	</div>
+	<div style="font-size: 150px;margin-left:12%;color:white"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+	</div>
+	</div>
+</div>
+</div>
+
 </div>
 	<script type="text/javascript">
 	function Remove(d){
@@ -287,6 +433,7 @@ Lets build a complete website with sophisticated web technologies and the power 
 	}
 	var flag=0
 	var count=0
+
 	function fall(){
 // 	var tl=gsap.timeline()
 // 	if(flag%3 === 'p'){
@@ -316,8 +463,11 @@ Lets build a complete website with sophisticated web technologies and the power 
 	if (flag%3 === 'p'){
 		tl.fromTo(d,{duration:10,x:ranx,y:-850},{duration:10,y:10,rotation:360, ease:Linear.easeNone,scale:0})
 	}
+	var width1=document.getElementById('screen1').clientWidth
 	gsap.fromTo(g,{duration:10,x:100,y:-850},{duration:10,y:-25})
-	gsap.fromTo(h,{duration:10,x:1400,y:-850},{duration:10,y:-25})
+	gsap.fromTo(h,{duration:10,x:width1*0.91,y:-850},{duration:10,y:-25})
+
+
 	
 	flag=((flag+1)%26)+26	
 	count=(count+1)%26
@@ -327,6 +477,57 @@ Lets build a complete website with sophisticated web technologies and the power 
 	}
 	fall()
 	setInterval(fall,300)
+	gsap.registerPlugin(MotionPathPlugin);
+	// gsap.to(".box",{duration:2,motionPath:"#path",repeat:-1})
+	var x=document.getElementsByClassName("percen");
+	var j=0;
+		for(i=0; i<x.length; i++){
+		x[i].addEventListener("mouseover",function(){
+			if(j==0){
+			var elem=this;
+			var till = elem.childNodes[1].innerHTML;
+			switch(till){
+				case '70':
+				till=70;
+				break;
+
+				case '60':
+				till=60;
+				break;
+
+				case '50':
+				till=50;
+				break;
+
+				case '40':
+				till=40;
+				break;
+
+				case '30':
+				till=30;
+				break;
+
+				default:
+				still=100;
+			}
+			// var till=parseInt(till)
+			var width=10;
+			var id=setInterval(frame,10)
+			function frame(){
+				if(width >= till){
+					clearInterval(id);
+					j=0;
+				}
+				else{
+					width++;
+					elem.style.width=width+"%";
+					elem.childNodes[2].innerHTML=width+"%"
+				}
+			}
+		}
+		});
+		}
+
 	</script>
 
 </body>
